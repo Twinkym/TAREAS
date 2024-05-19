@@ -2,6 +2,14 @@
 
 Este proyecto es un quiz de FrontEnd implementado con HTML, CSS, JavaScript, siguiendo el principio de responsabilidad única y el patron singleton.
 
+## Video demostración
+
+
+
+https://github.com/Twinkym/TAREAS/assets/73356704/d2d55638-5282-4d23-97e4-a69c3020d590
+
+
+
 ## Estructura de Archivos
 
 quiz-app/
