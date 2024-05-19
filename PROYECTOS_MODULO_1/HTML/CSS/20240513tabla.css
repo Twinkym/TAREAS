@@ -1,0 +1,61 @@
+*::before, *::after{
+    box-sizing: border-box;
+}
+table{
+    display: table;
+    table-layout: fixed;
+    border-spacing: 0;
+    border-collapse: collapse;
+    font-family: "1und1webSansCodens", Arial, Helvetica, sans-serif;
+    margin: 0 0 15px;
+    width: 100%;
+    text-indent: initial;
+    
+}
+
+tr{
+    display: table-row;
+    vertical-align: inherit !important;
+    border-color: inherit !important;
+}
+
+.title-h{
+    background-color: #d9d9d9 !important;
+}
+
+td{
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+    vertical-align: top;
+    width: 65px;
+}
+
+.description{
+    background: #f5f5f5 !important;
+}
+
+@media screen and (max-width: 730px) and (orientation: portrait) {
+    table {
+        width: 100%;
+        margin: 0 0 15px;
+        overflow-x: auto!important;
+    }
+
+    table, th, td {
+        font-size: 12px !important;
+        line-height: 1.5;
+    }
+
+    th, td {
+        padding: 5px !important;
+    }
+
+    td {
+        width: auto !important;
+        white-space: nowrap !important;
+        overflow: hidden;
+        text-overflow: ellipsis !important;
+    }
+}

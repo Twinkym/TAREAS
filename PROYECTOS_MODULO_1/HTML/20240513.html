@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="Es-es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Author" content="David De La Puente" />
+    <title>Funciones del Sistema Operativo</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="./CSS/20240513.css" />
+    <link rel="stylesheet" href="./CSS/20240513tabla.css">
+  </head>
+  <body>
+    <div class="contenido">
+      <h1>Funciones del Sistema Operativo</h1>
+      El sistema operativo, debe encargarse de gestionar los recursos del
+      sistemas y dar a las apliaciones acceso a ellos. Las <mark>funciones</mark>  del Sistema
+      Operativo se pueden resumir en:
+      <ul>
+        <li>1. Gestión de procesos</li>
+        <li>2. Gestión de memoria </li>
+        <li>3. Gestión de Entrada/Salida</li>
+        <li>4. Gestión de archivos</li>
+        <li>5. Gestión de la seguridad</li>
+        <li>6. Interfaz de usuario</li>
+      </ul>
+          
+      <h2>Gestión de Archivos</h2>
+      El sistema operativo se encarga de abstraer al usuario y las aplicaciones
+      de las particularidades del acceso y la escritura a través de la gestión
+      de archivos. Esta gestión la llevan a cabo los SSOO a través de un
+      componente denominado sistema de archivos. El sistema de archivos es el
+      componente del sistema operativo encargado de administración y gestionar
+      las memorias de almacenamiento. Sus principales funciones son: o
+      Estructurar la información en archivos y directorios (contenedores de
+      archivos). o Asignar espacio en el dispositivo a los archivos. o Permitir
+      el acceso a estos archivos. o Gestionar el espacio libre disponible.
+      Existen distintos sistemas de archivos que serán usados dependiendo del
+      sistema operativo instalado en el equipo. Por lo general, los sistemas
+      operativos soportan varios sistemas de archivos, aunque usan
+      preferentemente uno o varios sobre el resto. [UF1465] Computadores para
+      Bases de Datos Sistemas de Archivo pag. 3 Los sistemas de archivos pueden
+      disponer o carecer de ciertas características: Tamaño máximo (MA/MS)
+      <p class="pCaracteristicas">
+        Los sistemas de archivos tienen limitados el tamaño máximo de archivo y
+        el tamaño máximo del propio sistema de archivos. En los que se usan
+        modernamente, estos tamaños son lo suficientemente grandes como para no
+        ser una preocupación, excepto en el sistema FAT, que aún se usa por su
+        simplicidad en dispositivos externos de almacenamiento (4 GB en ambos
+        casos).
+      </p>
+
+      Journaling
+      <p class="pCaracteristicas">
+        Cuando disponen de journaling los sistemas de archivos son capaces de
+        gestionar transacciones. El journaling sirve para combatir la corrupción
+        de datos, por lo que un sistema que carezca de él será más propenso a
+        corromperse ante un apagado inesperado de la máquina.
+      </p>
+
+      Seguridad
+      <p class="pCaracteristicas">
+        Un sistema de archivos habilita la seguridad de los archivos cuando
+        incluye en las propiedades de los archivos qué acciones sobre el propio
+        archivo pueden hacer los distintos usuarios.
+      </p>
+
+      Fragmentación
+      <p class="pCaracteristicas">
+        Como en el caso de la memoria principal, las escrituras y borrados
+        provocan la fragmentación de los datos en los sistemas de archivos. Por
+        lo general, estos siguen estrategias para minimizar y corregir la
+        fragmentación. Una excepción, es FAT que no dispone de estos mecanismos
+        y que, en consecuencia, tiende a presentar una gran fragmentación.
+      </p>
+
+      Cuotas (Q)
+      <p class="pCaracteristicas">
+        Las cuotas permiten establecer cuál es el uso máximo que un usuario
+        puede hacer del sistema de archivos. Por ejemplo, habilitaría para que
+        no pudiera ocupar más de 1GiB en total. Por supuesto, requiere que el
+        sistema tenga implementada la seguridad, porque de lo contrario no se
+        podrá conocer a quién pertenece el archivo.
+      </p>
+
+      [UF1465] Computadores para Bases de Datos Sistemas de Archivo pag. 4
+      Compresión (Z)
+      <p class="pCaracteristicas">
+        La compresión propicia que los archivos, de forma transparente, se
+        almacenen comprimidos en el sistema de archivos, lo que permite ahorrar
+        espacio de almacenamiento.
+      </p>
+
+      Instantáneas
+      <p class="pCaracteristicas">
+        Esta característica da la posibilidad de guardar el estado exacto de un
+        sistema de archivos en un instante dado. Esto permitiría retrotraerse a
+        ese instante en cualquier momento futuro.
+      </p>
+
+      Espacios virtuales
+      <p class="pCaracteristicas">
+        Es la capacidad del sistema de archivos para constituir una partición
+        virtual (llamada volumen) uniendo distintas particiones físicas de un
+        mismo disco o discos distintos.
+      </p>
+
+      Cifrado
+      <p class="pCaracteristicas">
+        El sistema de archivos puede también tener la capacidad de cifrar los
+        datos de forma transparente al almacenarlos sin necesidad de software
+        adicional.
+      </p>
+
+      RAID
+      <p class="pCaracteristicas">
+        La capacidad de constituir un sistema RAID posibilita crear
+        almacenamientos tolerantes a fallos o mejorar los rendimientos de
+        lectura y escritura
+      </p>
+      <h2>Tipos de archivos</h2>
+      <table>
+        <tbody>
+          <tr class="title-h">
+            <td>
+              <p><strong>Nombre</strong></p>
+            </td>
+            <td>
+              <p><strong>Uso</strong></p>
+            </td>
+            <td>
+              <p><strong>Sistema operativo (compatibilidad)</strong></p>
+            </td>
+            <td>
+              <p><strong>Características</strong></p>
+            </td>
+          </tr>
+          <tr class="description">
+            <td>
+              <p><strong>FAT32</strong></p>
+            </td>
+            <td>
+              <p>Medios de almacenamiento extraíbles</p>
+            </td>
+            <td>
+              <p>- Windows</p>
+              <p>- Mac OS X/macOS</p>
+              <p>- Linux (si se instalan los correspondientes controladores)</p>
+            </td>
+            <td>
+              <p>- Alta compatibilidad</p>
+              <p>- Compatible con muchos tipos de <em>hardware</em></p>
+              <p>- Sin funciones de cifrado ni compresión</p>
+              <p>- No garantiza particularmente la seguridad de los datos</p>
+              <p>- Ideal para particiones más pequeñas</p>
+              <p>- Volumen máximo de datos: 4 GB</p>
+            </td>
+          </tr>
+          <tr class="description">
+            <td>
+              <p><strong>exFAT</strong></p>
+            </td>
+            <td>
+              <p>Medios de almacenamiento extraíbles</p>
+            </td>
+            <td>
+              <p>- Windows</p>
+              <p>- Mac OS X/macOS (compatible a partir de 10.6.4)</p>
+              <p>- Linux (si se instalan los correspondientes controladores)</p>
+            </td>
+            <td>
+              <p>- Aún no es un estándar generalizado</p>
+              <p>- No permite gestionar derechos</p>
+              <p>- No permite comprimir los datos</p>
+              <p>
+                - Ideal para memorias <em>flash</em> más pequeñas, a partir de
+                32 GB (memorias USB, tarjetas SD)
+              </p>
+              <p>
+                - Tamaños y particiones ilimitados (según el estado actual de la
+                tecnología)
+              </p>
+              <p>- Volumen máximo de datos: 512 TB</p>
+            </td>
+          </tr>
+          <tr class="description">
+            <td>
+              <p><strong>NTFS</strong></p>
+            </td>
+            <td>
+              <p>Discos duros internos y externos</p>
+            </td>
+            <td>
+              <p>- Windows</p>
+              <p>
+                - Mac OS X/macOS (de forma integral instalando un
+                <em>software</em> adicional)
+              </p>
+              <p>- Linux (instalando controladores)</p>
+            </td>
+            <td>
+              <p>- Gestión de derechos</p>
+              <p>
+                - Mejora de la seguridad de los datos: protege contra la pérdida
+                y la modificación de los datos; permite el cifrado
+              </p>
+              <p>- Permite comprimir los datos;</p>
+              <p>alto rendimiento con medios de almacenamiento grandes</p>
+              <p>
+                - Se especializa en archivos extensos y en grandes capacidades
+                de almacenamiento
+              </p>
+              <p>
+                - Inadecuado para discos pequeños y particiones de menos de 400
+                MB (demasiada potencia)
+              </p>
+              <p>- Volumen máximo de datos: 256 TB</p>
+            </td>
+          </tr>
+          <tr class="description">
+            <td>
+              <p><strong>APFS</strong></p>
+            </td>
+            <td>
+              <p>Unidades SSD</p>
+            </td>
+            <td>
+              <p>- macOS (el estándar desde la versión 10.13 High Sierra)</p>
+              <p>
+                - Versiones anteriores de Mac OS y Windows (instalando un
+                <em>software</em> adicional)
+              </p>
+            </td>
+            <td>
+              <p>
+                - Optimizado para unidades de estado sólido (SSD) y otros
+                dispositivos de almacenamiento <em>flash</em>
+              </p>
+              <p>- También funciona en unidades mecánicas e híbridas</p>
+              <p>- Permite el cifrado de datos</p>
+              <p>
+                - Optimiza la gestión del espacio de almacenamiento (función de
+                espacio compartido)
+              </p>
+              <p>
+                - Función de protección contra bloqueos, que protege contra
+                daños en el sistema de archivos (por ejemplo, en caso de caída
+                del sistema)
+              </p>
+              <p>- Compatible con Fusion Drive desde macOS 10.14 Mojave</p>
+              <p>- Volumen máximo de datos: 8 exbibytes</p>
+            </td>
+          </tr>
+          <tr class="description">
+            <td>
+              <p><strong>HFS+</strong></p>
+            </td>
+            <td>
+              <p>Discos duros internos y externos</p>
+            </td>
+            <td>
+              <p>Mac OS X/macOS</p>
+            </td>
+            <td>
+              <p>- Sistema de archivos maduro y probado</p>
+              <p>- Especialmente indicado para discos mecánicos</p>
+              <p>
+                - No optimizado para tecnologías de almacenamiento modernas
+                (SSD, <em>flash</em>)
+              </p>
+              <p>- Mejor compatibilidad con versiones anteriores que APFS</p>
+              <p>
+                - Vida útil limitada; probablemente deje de ser compatible con
+                Apple a largo plazo
+              </p>
+              <p>
+                - Perderá importancia progresivamente debido a la “conversión
+                forzada” y parcialmente automatizada a APFS
+              </p>
+              <p>- Volumen máximo de datos: 8 exbibytes</p>
+            </td>
+          </tr>
+          <tr class="description">
+            <td>
+              <p><strong>ext4</strong></p>
+            </td>
+            <td>
+              <p>Linux</p>
+            </td>
+            <td>
+              <p>- Linux</p>
+              <p>- Windows (solo con <em>software</em> adicional)</p>
+              <p>- Mac OS X/macOS (solo con <em>software</em> adicional)</p>
+            </td>
+            <td>
+              <p>En comparación con versiones anteriores de ext:</p>
+              <p>- Mejora del rendimiento</p>
+              <p>- Mejora de la seguridad de los datos</p>
+              <p>- Incorpora cifrado (desde Linux Kernel 4.1)</p>
+              <p>
+                - La nueva función <em>extents</em> aumenta la velocidad de
+                procesamiento de archivos grandes y evita la fragmentación
+              </p>
+              <p>- Gestión de derechos</p>
+              <p>- Volumen máximo de datos: 16 TB</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

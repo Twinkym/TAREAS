@@ -1,0 +1,17 @@
+@import "textos.css";
+
+body{
+    background-color: blueviolet;
+}
+
+h2{
+    color: aqua;
+}
+
+table, tr, th, td {
+    border: 1px solid #fff;
+}
+
+td{
+    color: #fff;
+}

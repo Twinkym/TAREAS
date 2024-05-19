@@ -1,0 +1,17 @@
+dnf update
+
+
+
+dnf upgrade
+
+
+dnf distro-sync
+
+
+dnf update && dnf upgrade && dnf distro-sync
+
+
+dnf install epel-release
+
+
+dnf clean all

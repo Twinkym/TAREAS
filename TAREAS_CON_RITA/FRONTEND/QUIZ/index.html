@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="Es-es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="David De La Puente">
+    <title>Quiz de FrontEnd </title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="./CSS/styles.css">
+</head>
+
+<body>
+    <div id="quiz-container">
+        <div id="question-container">
+            <h2 id="question"></h2>
+            <div id="options"></div>
+            <button id="next-btn" type="button" class="hidden">siguiente</button>
+        </div>
+        <div id="score-container" hidden>
+            <h2>Tu puntuación</h2>
+            <p id="score"></p>
+            <h3>Las diez mejores puntuaciones</h3>
+            <ul id="highscores"></ul>
+        </div>
+    </div>
+    <script type="module" src="./JS/main.js"></script>
+</body>
+
+</html>

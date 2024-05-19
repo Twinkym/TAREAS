@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Documento descriptivo de la memoria de una computadora">
+    <meta name="author" content="David De La Puente Enriquez">
+    <title>La Memoria De Una Computadora</title>
+    <link rel="shortcut icon" href="./FAVICON/ram.png" type="image/x-icon">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="./CSS/styles.css">
+</head>
+
+<body>
+    <!-- Menciones y agradecimientos -->
+    <p>Todos los iconos usados para crear esta web han sido descargados de <a
+            href="https://www.flaticon.es/iconos-gratis/ram" title="ram iconos">Ram iconos creados por Freepik -
+            Flaticon</a> aunque esto no estaba en el ejercicio me he permitido esta licencia para darle algo de bonito a
+        la web.</p>
+    <!-- Cabeceras son todas las etiquetas (h) constan de 6 y solo puede haber una sola H1 -->
+    <h1>Estrucutra Y Componentes de un computador</h1>
+    <h2>La Memoria RAM</h2>
+    <!-- Contenido -->
+    <p>La Memoria RAM <b>el primario de el ordenador.</b> Sus siglas significan <i>Random Access Memory</i>,
+        lo que traducido al español sería <i>Memoria de Acceso Aleatorio.</i> En ella se guardan las instrucciones que
+        serán
+        ejecutadas y constituye uno de los elementos más importantes para garantizar el correcto funcionamiento del
+        mismo.
+    </p>
+    <p>La memoria RAM tiene dos características que la diferencian del resto de tipos de almacenamiento. Por una parte
+        tiene
+        una enorme <b> velocidad </b> , y por otra <b>volatilidad:</b> los datos sólo se almacenan de forma temporal.
+        Esto
+        quiere decir
+        que cada
+        vez que se reinicie o apague el ordenador, los datos que están almacenados en la RAM se pierdan.
+    </p>
+    <p>Una forma común de describir la memoria principal de un ordenador es como una colección de celdas que almacenan
+        datos e
+        instrucciones, en una unidad específica de información denominada octetos o palabras e identificada unívocamente
+        por un
+        número o dirección de memoria.
+    </p>
+    <p>EL funcionamiento de la memoria es similar al método utilizado para ordenar la correspondencia en una oficina
+        postal. A
+        cada bit de datos se le es asignada una dirección y cada dirección corresponde a una ubicación en la memoria, en
+        un
+        registro específico de alta velocidad, integrado en el microprocesador y que se llama <b>MAR</b> (Memory Address
+        Register).
+        Este registro contiene la dirección del dato que se quiere leer o escribir. El registro está conectado con el
+        bus de
+        direcciones, y su contenido se refleja en este bus.
+    </p>
+    <p>El número de direcciones que se pueden direccionar con una CPU depende del tamaño del MAR. Si el MAR tiene n bits
+        de
+        tamaño entonces se podrán direccionar un máximo de 2n palabras.
+    </p>
+    <p>Las memorias se instalan dentro de la Placa Base en los llamados Bancos de memorias: ellos están formado por uno
+        o
+        varios "chips" que forman la RAM, ésta es una de las dos partes que componen la memoria principal. Los PC
+        actuales
+        contienen una serie de zócalos donde se insertan los
+        denominados módulos SIMM (Single Inline Memory Module) formados estos a su vez por varios "chips"; esta
+        construcción
+        modular permite añadir más módulos, y por tanto más memoria, cuando resulta necesario de una forma muy sencilla;
+        eso si,
+        respetando unas reglas de colocación en cuanto a su número y tamaño.
+    </p>
+    <h3>Magnitudes de la memoria:</h3>
+    <p><b>Tamaño de la celda:</b> define su anchura de palabra, y viene fijado por el ancho del registro de información
+        de
+        memoria. Si
+        la palabra interna es superior a la de la memoria, necesitara hacer más de un acceso para conseguir toda la
+        información.
+    </p>
+    <p> <b>Capacidad o tamaño de la memoria:</b> El número de miles de posiciones que contiene, que en los ordenadores
+        se expresan en
+        Kbytes. En la actualidad, el tamaño de la palabra es múltiplo del byte, ya que de esta forma el acceso a la
+        misma puede
+        hacerse desde uno al ancho máximo del bus de
+        datos. Así, tenemos palabras de 8, 16, 32, 64 bits y capacidades medidas siempre en potencia de dos: 8, 16, 64,
+        128
+        K...etc (siendo 1K igual a 1024).
+    </p>
+    <p> <b>Tiempo de Acceso:</b> Es el tiempo que invierte el ordenador desde que se emite la orden de lecturaescritura,
+        hasta que
+        finaliza la misma.
+    </p>
+    <h2>La memoria CACHE</h2>
+    <p>La memoria CACHE es una memoria ultrarrápida que sirve al ordenador para tener a mano ciertos datos que
+        previsiblemente
+        serán utilizados en las siguientes operaciones sin tener que acudir a la memoria RAM, reduciendo el tiempo de
+        espera.
+        Normalmente en la memoria caché se almacenan datos e instrucciones que el procesador va a necesitar para
+        completar
+        diferentes tareas a corto plazo. Esta memoria se divide en diferentes niveles, pero su función base es la misma:
+        apoyar
+        a la CPU para mejorar su rendimiento.
+    </p>
+    <h3>Niveles de la memoria caché</h3>
+    <p>Generalmente, la memoria caché se divide en un total de tres niveles: L1, L2 y L3, que obedecen a un orden de
+        jerarquía
+        establecido por cercanía al procesador, velocidad y capacidad.</p>
+    <p> <b>Caché L1:</b> es el nivel más básico, la más cercana al procesador y la más rápida. También es la que menos
+        capacidad
+        tiene
+        (entre 64Kb y 3Mb)</p>
+    <p> <b>Caché L2:</b> corresponde al nivel intermedio que presenta un buen equilibrio entre capacidad, cercanía y
+        velocidad (entre 512Kb y
+        16Mb en total).</p>
+    <p> <b>Caché L3:</b> posiciona en un nivel inferior a la anterior tanto en cercanía como en velocidad, pero tiene
+        una capacidad mucho mayor
+        (entre 3Mb y 64Mb en total).</p>
+    <p> Cuando un procesador busca instrucciones y datos que necesita primero recurre a la memoria caché L1, si no
+        encuentra
+        nada recurre a la caché L2 y finalmente a la caché L3. En caso de que ninguna de las cachés contenga lo que está
+        buscando no tiene más opción que recurrir a la memoria RAM, y si tampoco está en ella tiene que realizar un
+        ciclo de
+        trabajo completo. El tiempo que se consume en acceder a cada nivel de memoria se conoce como <b>latencia.</b>
+    </p>
+    <h2>La memoria ROM (Read Only Memory)</h2>
+    <p>Es llamada así porque el microprocesador no puede reescribirla, solo puede leer lo que ya existe en ella. Esta
+        información es grabada en el chip en el momento de su fabricación. Se utiliza una máscara, que es un patrón
+        maestro, que
+        incluye la información que será almacenada en el dispositivo final.
+        Dentro de las memorias ROM se encuentra el BIOS. El término BIOS significa Sistema Básico de Entrada/Salida
+        (Basic
+        Input/Output System). Consiste en el software mínimo e imprescindible que necesita el hardware del ordenador
+        para
+        iniciar e interactuar con el sistema operativo al nivel más bajo, es decir consiste en una serie de subrutinas
+        básicas
+        de Entrada/Salida, de ahí su nombre, agrupadas en un chip de memoria especial. En la actualidad, la mayoría de
+        las
+        tarjetas madre
+        presentan el BIOS en memorias FLASH ROM, las cuales para su actualización solo necesitan un programa utilitario
+        que se
+        encuentra por lo general en las páginas WEB de los fabricantes de tarjetas madres.
+    </p>
+    <h3>Variantes Tecnológicas de las memorias ROM</h3>
+    <p> Las <b>PROM</b> (Programmable ROM). Una PROM es una ROM cuyo contenido puede ser definido a posteriori de
+        construida, mediante una
+        actividad de programación que se realiza utilizando un circuito electrónico especial. Cuando se graba una PROM
+        con un
+        cierto contenido no hay marcha atrás.</p>
+    <p> <b>EPROM</b> (Erasable PROM) es una ROM que puede ser borrada. El mecanismo de borrado es totalmente distinto al
+        de programación e
+        implica un proceso de exposición del circuito a luz ultravioleta por varios minutos. La gran ventaja es que
+        puede
+        reutilizar las EPROMs muchas veces borrando su contenido y grabando uno nuevo. </p>
+    <p> <b>EEPROM</b> (Electrical EPROM). Una EPROM cuyo proceso de borrado se hace eléctricamente y puede efectuarse
+        sin retirar el circuito
+        integrado del sistema. Posee otra diferencia importante con la EPROM: una EEPROM normalmente tiene la capacidad
+        de
+        borrar cada bit en forma individual (también hay implementaciones que borran una palabra completa en cada
+        operación de
+        borrado).
+    </p>
+    <h2>Impacto de la memoria en el rendimiento del sistema</h2>
+    <P><b>Velocidad de acceso:</b> La velocidad de acceso a la memoria afecta directamente al rendimiento del sistema.
+        Si la
+        memoria
+        es lenta, puede provocar retardos en la ejecución de programas y operaciones, lo que reduce la eficiencia
+        general del
+        sistema.
+    </P>
+    <P> <b>Cantidad de memoria:</b>
+        La cantidad de memoria disponible en un sistema determina cuántas aplicaciones y procesos
+        pueden
+        ejecutarse simultáneamente sin ralentizar el sistema. Si la memoria es insuficiente, es posible que el sistema
+        tenga que
+        recurrir al uso de la memoria virtual en el disco duro, lo que ralentiza significativamente las
+        operaciones.
+    </P>
+    <P><b>Tipo de memoria:</b> La elección del tipo de memoria también puede afectar al rendimiento. Por ejemplo, la
+        memoria
+        RAM DDR4
+        es generalmente más rápida que la DDR3, lo que puede mejorar el rendimiento del sistema.
+    </P>
+    <P><b>Latencia:</b> La latencia de la memoria, es decir, el tiempo que tarda en responder a una solicitud de acceso
+        a los
+        datos,
+        también afecta al rendimiento. Una menor latencia de memoria puede mejorar la capacidad de respuesta del
+        sistema.</P>
+    <P><b>Ancho de banda:</b> El ancho de banda de la memoria se refiere a la cantidad máxima de datos que la memoria
+        puede
+        transferir
+        en un período de tiempo determinado. Un mayor ancho de banda de memoria puede permitir una transferencia de
+        datos más
+        rápida y, por lo tanto, mejorar el rendimiento del sistema, especialmente en aplicaciones que requieren un alto
+        rendimiento de memoria, como la edición de video o el renderizado 3D.</P>
+    <P><b>Optimización de la memoria:</b> La optimización de la memoria, como la gestión eficiente de la caché y la
+        minimización de
+        los accesos a la memoria secundaria, puede mejorar el rendimiento general del sistema al reducir los cuellos de
+        botella
+        en el acceso a los datos.</P>
+    <P><b></b>En resumen, la memoria es un componente crítico en el rendimiento del sistema informático, y aspectos como
+        la
+        velocidad,
+        la cantidad, el tipo, la latencia y el ancho de banda de la memoria pueden tener un impacto significativo en la
+        experiencia del usuario y en la eficiencia del sistema en general.
+    </P>
+
+</body>
+
+</html>

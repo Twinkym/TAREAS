@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body> h1 {   
+    display: flex;
+    justify-content: center;
+}
+
+div {
+    display: flex !important;
+    width: 100vw;
+}
+
+img{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2{
+    background-color: cadetblue;
+}
+
+hr{
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    border-style: dashed;
+    border-width: 2px;
+    color: red;
+}
+
+p{
+    margin: 25px;
+}
+
+ol{
+    display: inline-block;
+    margin: 75PX;
+    list-style: upper-alpha;
+    width: 75%;
+}
+
+ol li{
+    padding: 10px;
+}
+
+ul{
+    margin: 75px;
+    list-style: circle;
+    width: 75%;
+}
+
+ul li{
+    padding: 10px;
+}
+
+#last-ul{
+    list-style: disc;
+}
+span{
+    color: red;
+}
+
+sup{
+    color: blue;
+}

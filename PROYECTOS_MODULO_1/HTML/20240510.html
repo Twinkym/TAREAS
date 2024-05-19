@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="Es-es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="David De La Puente">
+    <title>Computadores para Bases de Datos: La Memoria</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="./CSS/20240510.css">
+</head>
+<body>
+    <h1>Entender la Etiqueta de una memoria RAM</h1>
+    <p>Si tenemos que comprar un modulo  de memoria es esencial que podamos entender la etiqueta que la describe. Las etiquetas de memoria tienen, por lo general, la siguiente información:
+    </p>
+    <div><img src="./IMG/etiquetaRAM.png" alt="Etiqueta de una memoria RAM" ></div>
+    <h2><b>Kingston DIMM 8GB DDR3 PC3-1600 4-4-5-13 2000MHz no ecc ValueRam 2x4GB</b></h2>
+    <hr>
+    <p>Significado de las partes de la etiqueta:</p>
+    <ol>
+        <li>La <b>Marca de la memoria.</b> Si te vas a comprar una te sugiero siempre una marca reconocida, hay unas cuantas, pero kingston es la referencia. Huye de marcas a precios demasiado <em>"baratos"</em>, puede que no, pero a medio largo plazo puedes tener problemas.</li>
+        <li>El <b>Formato físico del módulo de memoria,</b> actualmente tenemos <span>DIMM</span> para ordenadores de sobremesa y <span>SO-DIMM</span> para portátiles. Antiguamente teníamos los formatos <span>SIMM</span>, ya totalmente obsoletos.</li>
+        <li><b>Capacidad de la memoria,</b> normalmente en Gigas, a no ser que estemos hablando de memorias muy antiguas que podían venir expresados en Megas.</li>
+        <li><b>Tipo de tecnologia utilizada</b>, actualmente tenemos desde <span>DDR, DDR2</span> (ambas obsoletas), <SPan>DDR3, DDR4 Y DDR5.</SPan> Cada una supone mejoras en diversos aspectos como por ejemplo, velocidad con respecto al anterior, y adémas son incompatibles entre ellas.</li>
+        <li><b>PCX:</b> Donde la <b>“X”</b> es un número, es otra forma de llamar al módulo, y equivale a DDRX, es decir, PC=DDR, PC2=DDR2, PC3=DDR3 y así sucesivamente.</li>
+        <li><b>PCX-NUMERO:</b> Representa la <span>tasa de transferencia en MB/seg</span>, y está relacionada directamente con la velocidad o frecuencia de la misma, que se representa en Mhz</li>
+        <li><b>Datos técnicos:</b> La memoria RAM guarda los datos en filas y columnas de manera que cuando quiere leer u escribir algo busca, selecciona y accede a una posición dentro de una fila y columna de manera que sabe exactamente donde está el dato.</li>
+    </ol>
+    <p>Analicemos los datos del ejemplo: <span>4-4-5-13</span></p>
+    <ul>
+        <li><b>El primer número</b> 4 en el ejemplo) se expresa como <span>CL (Cas Latency)</span> es el más importante de esta lista de números pues es el tiempo que pasó desde que seleccionamos la fila y la columna y salió el primer dato hacia el procesador. por o que cuanto más bajo sea el CL mejor ya que significará que la ram va muy rápido.</li>
+        <li><b>El segundo número</b> (4 en el ejemplo), es el <span>TRCD (Time RAS to CAS delay).</span> El TRCD es el tiempo que tarda la RAM en seleccionar una fila y seleccionar después la columna es decir primero la RAM selecciona la fila “5” y el TRCD es el tiempo que la RAM tarda en darse cuenta que esa fila está ubicada en la columna “C”.</li>
+        <li><b>El tercer número</b> (5 en el ejemplo), se conoce como  <span>TRP (Time RAS Precharge),</span> el tiempo que tarda en hacer un salto de linea es decir estoy leyendo la fila “5” y paso a la fila “6”.</li>
+        <li><b>El cuarto y último número</b> (13 en el ejemplo), es llamado <span>TRAS (Active to precharge).</span> Es el tiempo que tarda el controlador de memoria en permitir acceder ya sea para leer o escribir a otra posición de otra fila y columna.</li>
+    </ul>
+    <p>Simplificando, cuanto más pequeños sean todos estos números, más rápida es la respuesta de la RAM.</p>
+
+    <ol>
+        <li><b>Frecuencia</b> de la memoria <b>efectiva</b> en <mark> Mhz </mark> o más conocida como <b>velocidad de la memoria.</b> Todas las memorias de tipo <span>DDR (Double data range)</span> tienen el doble de la frecuencia de reloj (dos transacciones por cada ciclo de reloj). Indica la velocidad de reloj efectiva, mientras que <span>PCX-xxxx <sup>(E, F)</sup> </span> indica el ancho de banda teórico (aunque suele estar redondeado). El ancho de banda se calcula multiplicando la velocidad de reloj efectiva por ocho, ya que todas las DDRX (como la DDR) es una memoria de 64 bits, hay 8 bits en un byte, y 64 es 8 por 8. Respecto a la velocidad de reloj se multiplica finalmente, por 2. La relación entre ellas es la siguiente: - <span>Tasa de transferencia / 8 = Frecuencia efectiva</span>  o, lo que es lo mismo: - <span>Tasa de transferencia = Frecuencia efectiva * 8</span>  o bien - <span>Tasa de transferencia / 8 /2 = Frecuencia reloj</span> 
+            o lo que es lo mismo: - <span>Tasa de transferencia = Frecuencia reloj “real” x 8 x 2 </span> Por ejemplo: <span>PC3-1600</span> equivaldría a una <span>DDR3</span> con una frecuencia de <span>1600 / 8 = 200Mhz</span></li>
+        <li><b>Código detector de errores.</b> Normalmente con <span>ECC</span>  será un poco más lenta, pero con corrección de errores, y también más cara. La mayoría de los usuarios solo necesitan <span>no ECC</span>  (más barata)</li>
+        <li>Value RAM (etiqueta)</li>
+        <li><b>Disposición de la memoria total</b>, en este caso, 2 módulos de 4GB cada uno.</li>
+    </ol>
+    <p>Si tenemos por ejemplo los siguientes datos de una memoria RAM (en negritas):</p>
+    <ul id="last-ul">
+        <li>Nombre estándar: <b>DDR3-1600</b></li>
+        <li>Velocidad reloj (bus): <span>200Mhz</span></li>
+        <li>Velocidad efectiva E/S (la que aparece en el módulo): <span>800Mhz</span></li>
+        <li>Nombre módulo: <span>PC3-12800</span></li>
+        <li>Máxima capacidad de transferencia: <span>12800MB/seg</span></li>
+        <p>Podemos calcular el resto de datos (en <span>rojo</span>):</p>
+        <li><span>12800MB/seg</span> proviene de multiplicar <b>1600 x 8</b></li>
+        <li><span>PC3</span> de <b>DDR3</b></li>
+    </ul>
+</body>
+</html>

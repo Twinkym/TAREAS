@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Slide Container */
+.slide-container {
+    position: relative;
+    max-width: 1000px;    
+    margin: auto;
+}
+
+.slides {
+    display: none;
+}
+
+.slides> img{
+    width: 100%;
+    max-height: 70vh;
+}
+
+/* Next and Previous Section */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: cadetblue;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* Posicionar el boton next a la derecha */
+.next{
+    right: 0;
+    border-radius: 3px 0 0 3px ;
+}
+
+/* Añadir un recuadro de fondo semitransparente */
+.prev:hover, .next:hover {
+    color: aqua;
+    background-color: rgba(25, 116, 120, .8);    
+}
+
+.text{
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    padding: 8px 12px;
+    bottom: 8px;
+    width: 100%;
+    text-align:left;
+}
+
+/* Indicadores */
+.indicadores-container{
+    text-align: center;
+}
+
+.dot{
+    
+    cursor: pointer;  /* El valor del cursor es un puntero que indica  un enlace*/    
+    height: 15px;
+    width: 15px;
+    margin:0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover{
+    background-color: #5b4b4b;
+}
+
+/* animations */
+.fade {
+    animation-name: fade;
+    animation-duration: 3s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1;}
+} 

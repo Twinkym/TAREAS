@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="Es-es">
+
+<head>
+    <!-- Start MetaData Section -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="David De La Puente">
+    <meta name="Description" content="Página de slider JavaScript vanilla por David De La Puente ">
+    <!-- End MetaData Section -->
+    <!-- title document Section -->
+    <title>Slider JavaScript Vanilla</title>
+    <!-- Start Styles Links Section -->
+    <link rel="stylesheet" href="./CSS/styles.css">
+    <!-- Start Imports Section -->
+
+</head>
+
+<body>
+    <!-- Start Slider Section -->
+    <div class="slide-container">
+        <div class="slides fade">
+            <img src="./IMG/code-2.png" alt="Fragmento de HTML">
+            <div class="text">En este codigo hay un pequeño error</div>
+        </div>
+        <div class="slides fade">
+            <img src="./IMG/Elementos Web.jpg" alt="Elementos Web">
+            <div class="text">Elementos Web</div>
+        </div>
+        <div class="slides fade">
+            <img src="./IMG/code-1.png" alt="Meta Datos HTML">
+            <div class="text">Meta Datos HTML</div>
+        </div>
+    </div>
+    <!-- Start Next and Previous Section -->
+    <a href="#" class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a href="#" class="next" onclick="plusSlides(1)">&#10095;</a>
+    <!-- End Next and Previous Section -->
+    <!-- Start Circles Section -->
+    <div class="indicadores-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <!-- End Circles Section -->
+    <!-- End Slider Section -->
+    <!-- Start Scripts Section -->
+    <script src="./JS/slider.js"></script>
+    <!-- End Scripts Section -->
+</body>
+
+</html>

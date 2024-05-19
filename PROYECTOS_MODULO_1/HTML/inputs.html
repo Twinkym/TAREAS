@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="Es-es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="David De La Puente">
+    <title>Inputs HTML</title>
+    <!-- cdn -->
+
+    <!-- styles -->
+    <link rel="stylesheet" href="./CSS/inputs.css">
+</head>
+
+<body>
+    <h1 class="fas fa-h1 fa-lg fa-fw">Tipos de entrada de datos en HTML</h1>
+    <p>Selecciona el valor de cada elemento y haz clic sobre el botón
+        <input value="mostrar" type="button" onclick="mostrar()"></input>
+    </p>
+
+    <div id="EtiquetasTN">
+        <h2>Etiquetas para textos y números</h2>
+        <p>
+            <label for="texto">Escribe texto:</label><input type="text" name="texto" id="texto">
+            <span id="sTexto"></span>
+        </p>
+        <p>
+            <label for="number">Escribe un número</label><input type="number" name="number" id="number">
+            <span id="sNumero"></span>
+        </p>
+        <p>
+            <label for="password">Escribe un password: </label><input type="password" name="password" id="password">
+            <span id="sPassword"></span>
+        </p>
+        <p>
+            <label for="email">Escribe e-mail: </label><input type="email" name="email" id="email"><span
+                id="sMail"></span>
+        </p>
+        <p>
+            <label for="range">Ajusta el nivel: </label>
+            <input type="range" name="range" min="10" max="100" step="10" list="marcas" value="50" id="range">
+            <datalist id="marcas">
+                <option value=""></option>
+                <option value="10"></option>
+                <option value="20"></option>
+                <option value="30"></option>
+                <option value="40"></option>
+                <option value="50"></option>
+                <option value="60"></option>
+                <option value="70"></option>
+                <option value="80"></option>
+                <option value="90"></option>
+                <option value="100"></option>
+            </datalist>
+            <span id="sRange"></span>
+        </p>
+        <p>
+            <label for="telefono">Número de telefono: </label>
+            <input type="tel" name="telefono" id="telefono" value="930000000">
+            <span id="stel"></span>
+        </p>
+        <p>
+            <label for="enlace">Introduce la url: </label>
+            <input type="url" name="enlace" id="enlace" value="https://twinkym.github.io/portfoliokirgo/">
+            <span id="sEnlace"></span>
+        </p>
+        <p>
+            <label for="buscar">Search: </label>
+            <input type="search" name="buscar" id="buscar">
+            <span id="sBuscar"></span>
+        </p>
+        <p>
+            <label for="archivo">Selecciona el archivo: </label>
+            <input type="file" name="archivo" id="archivo">
+            <span id="sArchivo"></span>
+        </p>
+        <p>
+            <label for="color">Selecciona Color: </label>
+            <input type="color" name="color" id="color">
+            <span id="sColor"></span>
+        </p>
+        <p>
+            <label for="Oculto">Oculto</label>
+            <input type="hidden" name="Oculto" value="Oculto" id="Oculto">
+            <span id="sOculto"></span>
+        </p>
+    </div>
+    <div id="Selecciones">
+        <h2>Selección de opciones</h2>
+        <p>
+            <label for="Checkers">Selecciona una Opción: </label>
+            <label for="radio1">Opción 1</label>
+            <input type="radio" name="radio1" id="radio1" value="1"></input>
+            <label for="radio2">Opción 2</label>
+            <input type="radio" name="radio2" id="radio2" value="2" checked></input>
+            <label for="radio3">Opción 3</label>
+            <input type="radio" name="radio3" id="radio3" value="3"></input>
+            <span id="sOpciones"></span>
+        </p>
+        <p>
+            <label for="checkBox">Verificar: </label>
+            <input type="checkbox" name="checkBox" id="checkBox">
+            <span id="scheckBox"></span>
+        </p>
+        <p>
+            <label for="select">Selecciona (select): </label>
+            <select name="select" id="select">
+                <optgroup label="FrontEnd">
+                    <option value="1">HTML</option>
+                    <option value="2">CSS</option>
+                    <option value="3">JavaScript</option>
+                </optgroup>
+                <optgroup label="BackEnd">
+                    <option value="4">Java</option>
+                    <option value="5">Python</option>
+                    <option value="6">PHP</option>
+                </optgroup>
+                <optgroup label="BBDD">
+                    <option value="7">MySQL</option>
+                    <option value="8">Mong DB</option>
+                    <option value="9">PostGresql</option>
+                </optgroup>
+            </select>
+            <span id="sSelect"></span>
+        </p>
+        <p>
+            <label for="DataList">Selecciona (datalist): </label>
+            <input type="text" name="DataList" id="DataList" list="dataListClientes">
+            <datalist id="dataListClientes">
+                <option value="MySQL" data-posicion="0"></option>
+                <option value="Mongo DB" data-posicion="1"></option>
+                <option value="PostGresQL" data-posicion="2"></option>
+            </datalist>
+            <span id="sDataList"></span>
+        </p>
+        <p><em>La diferencia entre <b>select</b> y <b>datalist</b> es que este ultimo solo sugiere los valores </em></p>
+    </div>
+    <div id="timelabels">
+        <h2>Etiquetas para tiempo</h2>
+        <p>
+            <label for="fecha">Selecciona fecha: </label>
+            <input type="date" name="fecha" id="fecha" value="2024-05-16">
+            <span id="sFecha"></span>
+        </p>
+        <p>
+            <label for="fechaHora">Selecciona fecha y hora: </label>
+            <input type="datetime-local" name="fechaHora" id="fechaHora" value="2024-05-16T12:02">
+            <span id="sFechaHora"></span>
+        </p>
+        <p>
+            <label for="hora">Selecciona hora: </label>
+            <input type="time" name="hora" id="hora" value="12:16">
+            <span id="sHora"></span>
+        </p>
+        <p>
+            <label for="mes">Selecciona un mes: </label>
+            <input type="month" name="mes" id="mes" value="2024-05">
+            <span id="sMes"></span>
+        </p>
+        <h2>Textarea</h2>
+        <p>
+            <label for="semana">Selecciona una semana: </label>
+            <input type="week" name="semana" id="semana" value="2024-W22">
+            <span id="sSemana"></span>
+        </p>
+        <div class="textarea">
+            <label for="textarea">Escribe un texto: </label>
+            <textarea name="textarea" id="textArea" cols="30" rows="10">Contenido</textarea>
+            <span id="sTextArea"></span>
+        </div>
+
+        <div>
+            <p>Otro tipo de botón (con capacidad para graficos)</p>
+            <p><button onclick="alert('David DE La Puente')">
+                    <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
+                        alt="Boton que muestra alerta">
+                </button>
+            </p>
+
+        </div>
+
+        <script src="./JS/inputs.js"></script>
+</body>
+
+</html>
