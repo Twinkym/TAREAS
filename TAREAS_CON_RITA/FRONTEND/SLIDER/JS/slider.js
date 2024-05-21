@@ -2,7 +2,7 @@ let slideIndex = 1; // Empezamos desde la primera diapositiva
 showSlides(slideIndex);
 
 // Next/previous controls
-function plusSlides(n) {
+function pluSlides(n) {
     showSlides(slideIndex += n)
 }
 
