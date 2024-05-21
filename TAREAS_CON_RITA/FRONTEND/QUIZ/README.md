@@ -4,11 +4,7 @@ Este proyecto es un quiz de FrontEnd implementado con HTML, CSS, JavaScript, sig
 
 ## Video demostración
 
-
-
-https://github.com/Twinkym/TAREAS/assets/73356704/d2d55638-5282-4d23-97e4-a69c3020d590
-
-
+<https://github.com/Twinkym/TAREAS/assets/73356704/d2d55638-5282-4d23-97e4-a69c3020d590>
 
 ## Estructura de Archivos
 

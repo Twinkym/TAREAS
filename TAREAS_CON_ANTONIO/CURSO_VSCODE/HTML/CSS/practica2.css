@@ -1,0 +1,35 @@
+body{
+    background-image:url(../IMG/vecteezy_vector-abstract-futuristic-circuit-board-illustration-high_6115516.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    /* height: 100vh; */
+}
+
+h1{
+    color: #fff;
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    padding: 2em;
+}
+
+.conmtaner, .caja1, .caja2{
+    margin: 1em;
+    padding: 1em;
+    text-align: justify; /* Alinea el texto de forma que que quede justificado en linea */
+    color: #fff;
+}
+
+.caja1{
+    max-width: 800px;
+    max-height: 350px;        
+    border: 1px solid red;
+    overflow: scroll;
+}
+
+.caja2{
+    border: 1px dotted #fff;
+}

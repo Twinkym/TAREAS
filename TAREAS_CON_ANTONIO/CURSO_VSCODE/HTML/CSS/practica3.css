@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(https://tse3.mm.bing.net/th?id=OIP.ZTFywQb_i-SMmIFzGnfPggHaD8&pid=Api&P=0&h=180) ;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    
+    height: 150px;
+    background-color: aliceblue;
+    margin-top: 250px;
+    top: 0;
+    left: 0;
+    position: sticky;
+
+}
+
+.ancho{
+    width: 100%;
+    padding: 1em;
+    background-color: rgba(0, 125, 0, .6);
+}
+
+.logo-container {
+    color: #74C0FC;
+    margin: 2em;
+    width: 2em;
+    height: auto;
+    min-width: moz-fit-content;
+}
+
+
+nav ul{
+    list-style: none;
+}
+
+nav ul li {
+    display:inline-block;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: .5em;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+nav ul li:hover{
+    background-color: rgba(0, 125, 150, .6);
+}
+
+nav a:hover{
+    color: black;
+}
+
+nav ul li a:visited{
+    color: blue;
+}
+
+section{
+    width: 1024px;
+    background-color: rgba(255, 255, 255, .8);
+    overflow: hidden;
+    text-align: justify;
+    padding: 2em;
+}
+
+footer{
+    width: 100%;
+    height: 150px;
+    margin-bottom: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .6);
+}
