@@ -4,7 +4,7 @@ class ImageItem {
         this.ruta = ruta
         this.nombre = nombre;
         this.descripcion = descripcion;
-        this.index = 0; // Establecer el indice inicial en 0.
+        this.index = 0;
     }
 }
 
