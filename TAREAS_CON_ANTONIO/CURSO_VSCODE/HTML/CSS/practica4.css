@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    height: 0;
+    box-sizing: border-box;
+}
+
+#padre{
+    width: 100%;
+    height: 34.375em;
+    border: 4px solid red;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    background-image: url(../IMG/vecteezy_vector-abstract-futuristic-circuit-board-illustration-high_6115516.jpg);
+}
+
+#hijo1{
+    order: 3;
+    height: 100%;
+}
+
+#hijo2{
+    order:2;
+    height: 50vh;
+}
+
+#hijo3{
+    order: 0;
+    height: 75vh;
+}
+
+#hijo4{
+    order: 1;
+    height: 40vh;
+    background-clip: text;
+    border: 2px solid yellow;
+}
+
+.caja {
+    width: 15.625em;
+    height: 9.375em;
+    background-color: cornflowerblue;
+    border: 1px solid black;
+}
+
