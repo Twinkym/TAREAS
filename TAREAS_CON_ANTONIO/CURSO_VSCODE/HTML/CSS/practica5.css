@@ -1,0 +1,26 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    column-gap: 10%;
+    justify-content: space-evenly;
+}
+
+.row{
+    display: flex;
+    justify-content: space-around;
+    background-color: burlywood;
+    width: 100%;
+    margin: 1em;
+    padding: 1em;
+}
+
+.col-lg-6 {
+    margin: 10px;
+    width: calc(2em * 6) ;
+    background-color: rosybrown;
+    border: 5px dotted blueviolet;
+}
+
+.color{
+    color: aliceblue;
+}
