@@ -10,8 +10,7 @@ body{
 
 header{
     display: flex;
-    justify-content: center;
-    
+    justify-content: center;   
     height: 150px;
     background-color: aliceblue;
     margin-top: 250px;
@@ -28,16 +27,26 @@ header{
 }
 
 .logo-container {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    position: absolute;
     color: #74C0FC;
-    margin: 2em;
-    width: 2em;
+    left: 10px;
     height: auto;
-    min-width: moz-fit-content;
+    border: 2px solid gold;
+    border-radius: 25%;
+    min-width: 10vw;
 }
-
+img{
+    width: 10vw;
+    border-radius: 25%;
+    padding: 2px;
+}
 
 nav ul{
     list-style: none;
+    margin: 10vw;
 }
 
 nav ul li {
