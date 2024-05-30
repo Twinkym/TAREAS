@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    padding: 1em;
+    background-color:violet ;
+}
+
+#output{
+    font-size: 2em;
+    margin: 0 0 1em;
+}
