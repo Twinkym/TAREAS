@@ -1,0 +1,79 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+body {
+    background-color: black;
+    color: white;font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.main-container {
+    width: auto;
+    height: auto;
+    display: flex;
+}
+
+header {
+    height: auto;
+    background-color: teal;
+}
+
+section {
+    width: auto;
+    height: auto;
+    background-color: chartreuse;
+    margin: .5em;
+    padding: .8em;
+}
+
+footer {
+    height: 150px;
+    background-color: teal;
+    position:relative;
+}
+
+/* #titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+#rango {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: end;
+    padding: 1em;
+}
+
+#jugar {
+    width: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: end;
+    margin: 1em;
+}
+
+.myletra {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: .3em;
+    background-color:slateblue ;
+    color: white;
+    margin: .3rem;
+    border-radius: 25px;
+}
+
+.myletra:hover {
+    background-color: darkslateblue;
+}
+
+.myletra:checked {
+    background-color:aliceblue ;
+    color: black;
+}
