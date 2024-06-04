@@ -8,6 +8,10 @@ const medio = ['casa', 'perro', 'gato', 'pato'];
 const dificil = ['casa', 'perro', 'gato', 'pato', ];
 
 function Comenzar() {
+    let categoria = document.getElementById('categoria').value;
+    let array = eval(categoria.split('  '));
+    secreta = array[Math.floor(Math.random()) * array.length].toUpperCase() + array.slice;
+
     if (edad.value != 0) {
         PintarBtn();
         document.getElementById("btnJugar").setAttribute('disabled', 'disabled');
