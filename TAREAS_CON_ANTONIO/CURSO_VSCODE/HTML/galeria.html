@@ -11,6 +11,7 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Import src -->
     <script>
+        // Arrray con URLs de imágenes para la galeria. 
         const galeria = [
             'https://s1.elespanol.com/2023/10/31/motor/806180181_237250810_1706x960.jpg',
             'https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2023/04/03/16805217155714.jpg',
@@ -34,8 +35,9 @@
         ];
     </script>
     <style>
-        body {
-            text-align: center;
+        /* Stilos básicos */
+        *{
+            box-sizing: border-box;
         }
 
         p,
@@ -43,28 +45,41 @@
             font-weight: bold;
             color: rgb(6, 70, 70);
             background-color: bisque;
+            border-radius: 25px;
             padding: 1em;
         }
 
+        p {
+            text-align: justify;
+            margin: 2em 15em;
+        }
 
+        /* Estilos de la galería */
 
         .gallery img {
-            width: 100%;
-            height: 12.50em;
+            width: 9em;
+            height: 9em;
             object-fit: cover;
-            display: block;
-            margin: 1em;
+            margin: 2em;
             border: .4em ridge rgb(220, 160, 299);
         }
 
-        .gallery .col {
-            margin-bottom: 15px;
+        #gallery {
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
+
+        @media screen and (min-width: 1440) {
+            
+        }
+        
     </style>
 </head>
 
 <body>
-    <header class="container mt-4">
+    <!-- Encabezado con un select para elegir la catagoría de la galería -->
+    <header class="container mt-2 ">
         <div class="row">
             <div class="col-lg-2">
                 <label for="select">Tipo de Galeria: </label>
@@ -74,21 +89,27 @@
                     <option value="categoria2">categoria 2</option>
                     <option value="categoria3">categoria 3</option>
                     <option value="categoria4">categoria 4</option>
+                    <option value="categoria5">categoria 5</option>
+                    <option value="categoria6">categoria 6</option>
+                    <option value="categoria7">categoria 7</option>
+                    <option value="categoria8">categoria 8</option>
                 </select>
             </div>
         </div>
     </header>
     <p>Usar Bootstrap para crear una galeria de imagenes que se autoformateen al clickar sobre diferentes opciones de un
         select</p>
-    <section id="galeria" class="container mt-4 row gallery">
+        <!-- Contenedor de la galería -->
+    <section id="galeria" class="container mt-4 row gallery ">
 
     </section>
     <script>
+        // Función para cargar la galería según la categoría seleccionda
         function cargarGaleria(categoria) {
             const galeriaContainer = document.getElementById('galeria');
-            galeriaContainer.innerHTML = '';
+            galeriaContainer.innerHTML = '';  // Limpiar la galería
 
-            let cantidad = 0;
+            let cantidad = 0;   // Número de imágenes a mostrar
             switch (categoria) {
                 case 'all':
                     cantidad = galeria.length;
@@ -105,14 +126,27 @@
                 case 'categoria4':
                     cantidad = 5;
                     break;
+                case 'categoria5':
+                    cantidad = 6;
+                    break;
+                case 'categoria6':
+                    cantidad = 7;
+                    break;
+                case 'categoria7':
+                    cantidad = 8;
+                    break;
+                case 'categoria8':
+                    cantidad = 9;
+                    break;
                 default:
                     cantidad = 0;
                     break;
             }
 
+            // Crear y añadir las imágenes a la galería
             for (let i = 0; i < cantidad; i++) {
                 const col = document.createElement('div');
-                col.className = 'col-md-4 sm-6 lg-1';
+                col.className = 'col-md-2 sm-12 lg-1';
                 const img = document.createElement('img');
                 img.src = galeria[i];
                 img.alt = `Imagen ${i + 1}`;
@@ -121,15 +155,20 @@
             }
         }
 
+        // Inicializar la galería al cargar la página. 
+    
         document.addEventListener('DOMContentLoaded', () => {
             const select = document.getElementById('select');
+            // Añadir evento para cambiar la galería al cambiar la opción.
             select.addEventListener('change', (event) => {
                 cargarGaleria(event.target.value);
             });
+            // Cargar la galería con todas la imágenes por defecto
             cargarGaleria('all');
         });
     </script>
 
+<!-- Scripts Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
