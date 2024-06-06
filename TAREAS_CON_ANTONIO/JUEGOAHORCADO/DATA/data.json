@@ -1,5 +1,56 @@
-const categorias = [
-    "Edificiios",
-    "Ciudades",
-    "pueblos",
-] 
+{
+    "categorias": [
+      "Edificios",
+      "Ciudades",
+      "Pueblos",
+      "Animales",
+      "Personajes",
+      "Paises",
+      "Comida",
+      "Colores",
+      "Frutas",
+      "Naturaleza",
+      "Vehiculos",
+      "Numeros",
+      "Nombres"
+    ],
+    "cities": [
+      "Madrid",
+      "Barcelona",
+      "Valencia",
+      "Sevilla",
+      "Bilbao",
+      "Girona",
+      "Lleida",
+      "Tarragona",
+      "Zaragoza",
+      "Cordoba"
+    ],
+    "animals": [
+      "Cebra",
+      "Cerdo",
+      "Conejo",
+      "Elefante",
+      "Gallo",
+      "Gato",
+      "Hormiga",
+      "Jirafa",
+      "Leopardo",
+      "Lobo",
+      "Mapache"
+    ],
+    "personajes": [
+        
+    ],
+    "colors": [
+      "Rojo",
+      "Azul",
+      "Verde"
+    ],
+    "fruits": [
+      "Manzana",
+      "Pera",
+      "Uva"
+    ]
+  }
+  
